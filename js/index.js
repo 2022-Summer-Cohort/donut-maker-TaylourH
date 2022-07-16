@@ -1,4 +1,5 @@
 import DonutMaker from "./DonutMaker.js"
+// DONUT GAMEPLAY ELEMENTS 
 
 const donutCountEL = document.querySelector("#donutsMade");
 const autoClickEL = document.querySelector("#autoClickers");
@@ -37,6 +38,8 @@ resetBtn.addEventListener("click", () => {
     autoClickEL.innerHTML = "Auto Clickers Purchased: " + donut._autoClickerCount;
     multiplierEL.innerHTML = "Multipliers Purchased: " + donut._multiplierCount;
 })
+
+// DONUT SITE ELEMENTS
 
 
 

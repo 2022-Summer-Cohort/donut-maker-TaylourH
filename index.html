@@ -31,30 +31,46 @@
 
 <body>
   <section class="bakeryOwner">
-    <h2 class="apply">Apply for the open baker position.</h2>
-    <!-- <form action=""> -->
-    <label>Apply with your name</label>
-    <input type="text">
-    <button id="applyBtn">Apply</button>
-    <!-- </form> -->
-    <h3 class="hired">You're Hired! <br> The pay is $20/hr.<br> Welcome to the Bakery, <span class="baker">Baker's
-        Name</span><span class="hired">!</span></h3>
+    <div class="apply">
+      <h2>Apply for the open baker position.</h2>
+      <div>
+        <!-- <form action=""> -->
+        <label>Apply with your name</label>
+        <input type="text">
+        <button id="applyBtn">Apply</button>
+        <!-- </form> -->
+      </div>
+    </div>
+    <div class="appResult">
+      <!-- REPLACE with 1 or both below for JAVASCRIPT innerHTML -->
+      <!-- <h3 class="hiredWelcome"></h3>
+      <h3 class="bakerName"></h3> -->
+      <h3 class="hired">You're Hired!</h3>
+      <h3 class="hired">The pay is $20/hr.</h3>
+      <div class="bakerWelcome">
+        <h3 class="hired">Welcome to the Bakery,</h3>
+        <h3 class="bakerName">Baker's Name</h3>
+        <h3 class="hired">!</h3>
+      </div>
+    </div>
   </section>
   <section class="main">
     <section class="mainClicker">
       <div class="click1">
-        <p class="gameMessages">Game Messages</p>
-      </div>
-      <div class="click1">
-        <button class="clickerBtn">
-          <img class="mainDonut" src="/images/beignet.png" alt="">
-        </button>
-      </div>
-      <div class="click1">
-        <button class="specialBtn">
-          <img class="mardiGras" src="" alt="">
-        </button>
-        <h3>Month</h3>
+        <div class="gameMessages">
+          <p class="messageContent">Game Messages</p>
+        </div>
+        <div class="gameDonut">
+          <button class="clickerBtn">
+            <img class="mainDonut" src="/images/beignet.png" alt="">
+          </button>
+        </div>
+        <div class="special">
+          <button class="specialBtn">
+            <img class="mardiGras" src="/images/MaskandBeadsTemp1.jpg" alt="">
+          </button>
+          <h3>Month</h3>
+        </div>
       </div>
       <div class="click2">
         <h2 id="donutsMade">Beignets Made</h2>
@@ -76,6 +92,7 @@
         <button class="purchaseDmBtn">Purchase Donut Multiplier</button>
       </section>
     </div>
+    <hr>
     <section class="bakerInfo">
       <p class="pay">Baker Lifetime Pay $</p>
       <div class="bakerTime">
@@ -87,8 +104,12 @@
   <hr>
   <section class="resetGame">
     <h1>DANGER ZONE</h1>
+    <h4>WARNING</h4>
+    <p>You are about to <span class="reset">RESET</span> the game. All Progress will be lost! Click the button below at
+      your own risk!</p>
     <button class="reset">Reset Game</button>
   </section>
+  <hr>
   <footer>&copy; 2022 Beignet Bonanza </footer>
   <script src="/js/index.js" type="module"></script>
 </body>

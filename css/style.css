@@ -1,3 +1,9 @@
+/* PICK A GOOGLE FONT TO GO HERE */
+/* BKG COLOR for checking purposes only. Will replace with a better bkg style or image */
+* {
+    background-color: orange;
+}
+/* HEADER */
 .banner {
     background-image: url('/images/beignet.png');
     background-size: 25px;
@@ -6,10 +12,15 @@
     width: 100%;
     background-repeat: repeat-x;
 }
-
-.mainDonut {
-    height: 300px;
-    width: 300px;
+/* NAV BAR */
+nav {
+    background-color: purple;
+}
+nav a {
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
 }
 
 /* Company Info Popup */
@@ -76,3 +87,43 @@
 .popup .close:hover {
     color: #06D85F;
 }
+/* BAKERY OWNER */
+.apply {
+  background-color: yellow;
+}
+.appResult {
+ background-color: green;
+}
+
+/* MAIN CLICKER */
+.gameMessages {
+    height: 300px;
+    width: 300px;
+}
+
+.mainDonut {
+    height: 300px;
+    width: 300px;
+}
+.mardiGras {
+    height: 300px;
+    width: 300px;
+}
+/* GAME VARIABLES */
+#beveragePic {
+    height: 200px;
+    width: 200px; 
+}
+.purchases {
+    height: 200px;
+    width: 200px; 
+}
+/* RESET GAME */
+.resetGame {
+  background-color: rgb(230, 51, 51);
+}
+/* FOOTER */
+footer {
+    font-weight: bold;
+}
+
