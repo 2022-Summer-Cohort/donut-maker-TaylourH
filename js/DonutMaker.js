@@ -5,6 +5,7 @@ class DonutMaker {
         this._multiplierCount = 0;
         this._autoClickerCost = 100;
         this._multiplierCost = 10;
+        this._overallDonutCount = 0;
     }
 
     get donutCount() {
@@ -22,14 +23,21 @@ class DonutMaker {
     get multiplierCost() {
         return this._multiplierCost;
     }
+    get overallDonutCount() {
+        return this._overallDonutCount;
+    }
 
+    lifeTimeDonuts() {
+        this._overallDonutCount;
+    }
     addDonut() {
-        this._donutCount+= Math.pow(1.2, this._multiplierCount);
+        this._donutCount += Math.pow(1.2, this._multiplierCount);
+        this._overallDonutCount++;
     }
 
     autoClick() {
         for (let i = 0; i < this._autoClickerCount; i++) {
-          this.addDonut();
+            this.addDonut();
         }
     }
 
@@ -38,6 +46,7 @@ class DonutMaker {
             this._autoClickerCost *= 1.1;
             this._autoClickerCount++;
             this._donutCount -= this._autoClickerCost;
+            this._overallDonutCount += this.autoClickerCost;
         }
     }
 
@@ -46,8 +55,19 @@ class DonutMaker {
             this._multiplierCost *= 1.1;
             this._multiplierCount++;
             this._donutCount -= this._multiplierCost;
+            this._overallDonutCount += this._multiplierCost;
         }
     }
+
+    mardiGrasSpecial() {
+        this._donutCount += 50;
+        this._overallDonutCount += 50;
+    }
+    powderedSugarSpecial() {
+        this._donutCount += 25;
+        this._overallDonutCount += 25;
+    }
+
 }
 
 export default DonutMaker;

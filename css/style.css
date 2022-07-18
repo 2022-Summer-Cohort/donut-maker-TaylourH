@@ -1,8 +1,8 @@
 /* PICK A GOOGLE FONT TO GO HERE */
 /* BKG COLOR for checking purposes only. Will replace with a better bkg style or image */
-* {
+/* * {
     background-color: orange;
-}
+} */
 /* HEADER */
 .banner {
     background-image: url('/images/beignet.png');

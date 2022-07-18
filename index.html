@@ -34,11 +34,9 @@
     <div class="apply">
       <h2>Apply for the open baker position.</h2>
       <div>
-        <!-- <form action=""> -->
-        <label>Apply with your name</label>
-        <input type="text">
+        <label>Apply here:</label>
+        <input type="text" placeholder="Write your name..." id="applied">
         <button id="applyBtn">Apply</button>
-        <!-- </form> -->
       </div>
     </div>
     <div class="appResult">
@@ -46,9 +44,9 @@
       <!-- <h3 class="hiredWelcome"></h3>
       <h3 class="bakerName"></h3> -->
       <h3 class="hired">You're Hired!</h3>
-      <h3 class="hired">The pay is $20/hr.</h3>
+      <h3 class="hired">The pay is $3/per beignet made.</h3>
       <div class="bakerWelcome">
-        <h3 class="hired">Welcome to the Bakery,</h3>
+        <h3 class="hired">Welcome to the bakery,</h3>
         <h3 class="bakerName">Baker's Name</h3>
         <h3 class="hired">!</h3>
       </div>
@@ -67,9 +65,14 @@
         </div>
         <div class="special">
           <button class="specialBtn">
-            <img class="mardiGras" src="/images/MaskandBeadsTemp1.jpg" alt="">
+            <img class="mardiGras" src="/images/mardiGras.png" alt="">
           </button>
-          <h3>Month</h3>
+          <p class="specialCountDown">Countdown</p>
+          <!-- <h3 class="month">Month</h3> -->
+          <!-- <button class="specialBtn2">
+            <img class="powderedSugar" src="/images/multiplier.png" alt="">
+          </button>
+          <p class="specialCountDown">Countdown</p> -->
         </div>
       </div>
       <div class="click2">
@@ -78,26 +81,28 @@
     </section>
     <div class="gameVariables">
       <section class="beverage">
-        <img id="beveragePic" src="" alt="">
-        <h4>Beverage Level Name</h4>
+        <img id="beveragePic" src="/images/coffeebean.png" alt="">
+        <h4 class="beverageLevel">Beverage Level Name</h4>
       </section>
       <section class="autoClicks">
-        <img class="purchases" src="" alt="">
+        <img class="purchases" src="/images/autoClick.png" alt="">
         <h4 id="autoClickers">Auto Clickers Purchased</h4>
         <button class="purchaseAcBtn">Purchase Auto Clicker</button>
       </section>
       <section class="clickMultipliers">
-        <img class="purchases" src="" alt="">
+        <img class="purchases" src="/images/multiplier.png" alt="">
         <h4 id="multipliers">Multipliers Purchased</h4>
         <button class="purchaseDmBtn">Purchase Donut Multiplier</button>
       </section>
     </div>
     <hr>
     <section class="bakerInfo">
+      <p class="lifeDonuts">Lifetime Donuts</p>
       <p class="pay">Baker Lifetime Pay $</p>
       <div class="bakerTime">
-        <p class="yearsWorked">Years Worked</p>
-        <p class="monthsWorked">Months Worked</p>
+        <!-- <p class="yearsWorked">Years Worked</p>
+        <p class="monthsWorked">Months Worked</p> -->
+        <p class="timeWorked">Time</p>
       </div>
     </section>
   </section>
@@ -105,7 +110,8 @@
   <section class="resetGame">
     <h1>DANGER ZONE</h1>
     <h4>WARNING</h4>
-    <p>You are about to <span class="reset">RESET</span> the game. All Progress will be lost! Click the button below at
+    <p>You are about to <span class="boldReset">RESET</span> the game. All Progress will be lost! Click the button below
+      at
       your own risk!</p>
     <button class="reset">Reset Game</button>
   </section>

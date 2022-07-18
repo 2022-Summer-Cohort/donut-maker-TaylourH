@@ -42,7 +42,12 @@ nav {
     flex-direction: row;
     justify-content: space-around;
 }
-/* GAME Variables */
+
+/* .gameMessages .messageContent {
+  center message text in center of div
+} */
+
+/* GAME VARIABLES */
 .gameVariables {
     display: flex;
     flex-direction: row;
