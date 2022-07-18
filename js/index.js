@@ -106,6 +106,7 @@ function payStats() {
 //     if (this._overallDonutCount <= 100) {
 //         // beveragePicEL = display bL[0];
 //         beverageLvlEL.innerHTML = "Beverage Level: Coffee Bean";
+//         messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Coffee Bean";
 //     }
 //     else if (this._overallDonutCount >= 101 && this._overallDonutCount <= 300) {
 //          // beveragePicEL = display bL[1];
