@@ -1,11 +1,9 @@
 import DonutMaker from "./DonutMaker.js"
 
 // DONUT GAMEPLAY ELEMENTS 
-
 const donutCountEL = document.querySelector("#donutsMade");
 const autoClickEL = document.querySelector("#autoClickers");
 const multiplierEL = document.querySelector("#multipliers");
-const specialCountEL = document.querySelector(".specialCountDown");
 
 let donut = new DonutMaker();
 
@@ -35,25 +33,36 @@ setInterval(() => {
     workTick++;
     workHistory();
     payStats();
+    beverageLvlUp();
 }, 1000);
-
-let specialTick = 30;
 
 const mardiGrasBtn = document.querySelector(".specialBtn");
 mardiGrasBtn.addEventListener("click", () => {
     donut.mardiGrasSpecial();
-    specialTick--;
-    messagesEL.innerHTML = "The Mardi Gras Special is Active!";
-    specialCountEL.innerHTML = "Special Time Remaining: " + specialTick;
+    let specialTick = 30;
+    let specialCounter = setInterval(countDown, 1000); function countDown() {
+        messagesEL.innerHTML = "The Mardi Gras Special is Active!";
+        document.querySelector(".specialCountDown").innerHTML = "Special Time Remaining: " + specialTick;
+        specialTick -= 1;
+        if (specialTick === 0) {
+            document.querySelector(".specialCountDown").innerHTML = "Special Time Remaining: " + specialTick; clearInterval(specialCounter);
+        }
+    }
 })
 
-// const powderedSugarBtn = document.querySelector(".specialBtn2");
-// powderedSugarBtn.addEventListener("click", () => {
-//     donut.powderedSugarSpecial();
-//     specialTick--;
-//     messagesEL.innerHTML = "The Powdered Sugar Special is Active!";
-//     specialCountEL.innerHTML = "Special Time Remaining: " + specialTick;
-// })
+const powderedSugarBtn = document.querySelector(".specialBtn2");
+powderedSugarBtn.addEventListener("click", () => {
+    donut.powderedSugarSpecial();
+    let specialTick = 30;
+    let specialCounter = setInterval(countDown, 1000); function countDown() {
+        messagesEL.innerHTML = "The Powdered Sugar Special is Active!";
+        document.querySelector(".specialCountDown2").innerHTML = "Special Time Remaining: " + specialTick;
+        specialTick -= 1;
+        if (specialTick === 0) {
+            document.querySelector(".specialCountDown2").innerHTML = "Special Time Remaining: " + specialTick; clearInterval(specialCounter);
+        }
+    }
+})
 
 const resetBtn = document.querySelector(".reset");
 resetBtn.addEventListener("click", () => {
@@ -69,7 +78,6 @@ const lifetimeDonutsEL = document.querySelector(".lifeDonuts")
 const nameEL = document.querySelector(".bakerName");
 const timeEL = document.querySelector(".timeWorked");
 const payEL = document.querySelector(".pay");
-const beveragePicEL = document.querySelector("#beveragePic");
 const beverageLvlEL = document.querySelector(".beverageLevel");
 const messagesEL = document.querySelector(".messageContent");
 
@@ -95,35 +103,30 @@ function payStats() {
 }
 
 // Beverage Level
+function beverageLvlUp() {
+    let bL = ["/images/coffeebean.png", "/images/papercup.png", "/images/travelmug.png", "/images/coffeemug.png"];
 
-// function beverageLvlUp() {
-//     let bL = new Array[4];
-//     bL[0] = /images/coffeebean.png;
-//     bL[1] = /images/papercup.png;
-//     bL[2] = /images/travelmug.png;
-//     bL[3] = /images/coffeemug.png;
-
-//     if (this._overallDonutCount <= 100) {
-//         // beveragePicEL = display bL[0];
-//         beverageLvlEL.innerHTML = "Beverage Level: Coffee Bean";
-//         messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Coffee Bean";
-//     }
-//     else if (this._overallDonutCount >= 101 && this._overallDonutCount <= 300) {
-//          // beveragePicEL = display bL[1];
-//         beverageLvlEL.innerHTML = "Beverage Level: Paper Cup";
-//         messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Paper Cup!";
-//     }
-//     else if (this._overallDonutCount >= 301 && this._overallDonutCount  <= 500) {
-//          // beveragePicEL = display bL[2];
-//         beverageLvlEL.innerHTML = "Beverage Level: Travel Mug";
-//         messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Travel Mug!";
-//     }
-//     else if (this._overallDonutCount >= 501 && this._overallDonutCount  <= 1000) {
-//         // beveragePicEL = display bL[3];
-//         beverageLvlEL.innerHTML = "Beverage Level: Coffee Mug";
-//         messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Coffee Mug!";
-//     }
-// }
+    if (donut._overallDonutCount >= 25 && donut._overallDonutCount <= 100) {
+        document.getElementById("beveragePic").src = bL[0];
+        beverageLvlEL.innerHTML = "Beverage Level: Coffee Bean";
+        messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Coffee Bean";
+    }
+    else if (donut._overallDonutCount >= 101 && donut._overallDonutCount <= 300) {
+        document.getElementById("beveragePic").src = bL[1];
+        beverageLvlEL.innerHTML = "Beverage Level: Paper Cup";
+        messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Paper Cup!";
+    }
+    else if (donut._overallDonutCountt >= 301 && donut._overallDonutCount <= 500) {
+        document.getElementById("beveragePic").src = bL[2];
+        beverageLvlEL.innerHTML = "Beverage Level: Travel Mug";
+        messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Travel Mug!";
+    }
+    else if (donut._overallDonutCount >= 501 && donut._overallDonutCount <= 1000) {
+        document.getElementById("beveragePic").src = bL[3];
+        beverageLvlEL.innerHTML = "Beverage Level: Coffee Mug";
+        messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Coffee Mug!";
+    }
+}
 
 // MONTH STUFF
 
@@ -168,6 +171,8 @@ function payStats() {
 
 //     }
 // }
+
+
 
 
 
