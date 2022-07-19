@@ -4,6 +4,7 @@
     background-color: orange;
 } */
 /* HEADER */
+/* banner is having issues staying static on page and overlapping nav tabs */
 .banner {
     background-image: url('/images/beignet.png');
     background-size: 25px;
@@ -12,10 +13,13 @@
     width: 100%;
     background-repeat: repeat-x;
 }
+
 /* NAV BAR */
+/* do I want to add more definition to nav tabs? amybe look like buttons? */
 nav {
     background-color: purple;
 }
+
 nav a {
     text-decoration: none;
     background-color: purple;
@@ -87,12 +91,16 @@ nav a {
 .popup .close:hover {
     color: #06D85F;
 }
+
 /* BAKERY OWNER */
+/* diable game from being played until application name submitted then diable/hide application after name submitted
+and dispaly, (Your hired/pay/welcome baker name...) then application reappears when game reset  */
 .apply {
-  background-color: yellow;
+    background-color: yellow;
 }
+
 .appResult {
- background-color: green;
+    background-color: green;
 }
 
 /* MAIN CLICKER */
@@ -105,25 +113,31 @@ nav a {
     height: 300px;
     width: 300px;
 }
+
 .mardiGras {
     height: 300px;
     width: 300px;
 }
+
 /* GAME VARIABLES */
 #beveragePic {
     height: 200px;
-    width: 200px; 
+    width: 200px;
 }
+
 .purchases {
     height: 200px;
-    width: 200px; 
+    width: 200px;
 }
+
+/* SPECIAL */
+/* hide buttons until they are enabled/make them visible then diable/hide them */
 /* RESET GAME */
 .resetGame {
-  background-color: rgb(230, 51, 51);
+    background-color: rgb(230, 51, 51);
 }
+
 /* FOOTER */
 footer {
     font-weight: bold;
 }
-

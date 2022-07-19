@@ -104,25 +104,25 @@ function payStats() {
 
 // Beverage Level
 function beverageLvlUp() {
-    let bL = ["/images/coffeebean.png", "/images/papercup.png", "/images/travelmug.png", "/images/coffeemug.png"];
+    let bLPic = ["/images/coffeebean.png", "/images/papercup.png", "/images/travelmug.png", "/images/coffeemug.png"];
 
     if (donut._overallDonutCount >= 25 && donut._overallDonutCount <= 100) {
-        document.getElementById("beveragePic").src = bL[0];
+        document.getElementById("beveragePic").src = bLPic[0];
         beverageLvlEL.innerHTML = "Beverage Level: Coffee Bean";
         messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Coffee Bean";
     }
-    else if (donut._overallDonutCount >= 101 && donut._overallDonutCount <= 300) {
-        document.getElementById("beveragePic").src = bL[1];
+    else if (donut._overallDonutCount >= 101 && donut._overallDonutCount <= 500) {
+        document.getElementById("beveragePic").src = bLPic[1];
         beverageLvlEL.innerHTML = "Beverage Level: Paper Cup";
         messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Paper Cup!";
     }
-    else if (donut._overallDonutCountt >= 301 && donut._overallDonutCount <= 500) {
-        document.getElementById("beveragePic").src = bL[2];
+    else if (donut._overallDonutCountt >= 501 && donut._overallDonutCount <= 1250) {
+        document.getElementById("beveragePic").src = bLPic[2];
         beverageLvlEL.innerHTML = "Beverage Level: Travel Mug";
         messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Travel Mug!";
     }
-    else if (donut._overallDonutCount >= 501 && donut._overallDonutCount <= 1000) {
-        document.getElementById("beveragePic").src = bL[3];
+    else if (donut._overallDonutCount >= 1251) {
+        document.getElementById("beveragePic").src = bLPic[3];
         beverageLvlEL.innerHTML = "Beverage Level: Coffee Mug";
         messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Coffee Mug!";
     }

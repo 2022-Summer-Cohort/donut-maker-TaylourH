@@ -46,7 +46,7 @@ class DonutMaker {
             this._autoClickerCost *= 1.1;
             this._autoClickerCount++;
             this._donutCount -= this._autoClickerCost;
-            this._overallDonutCount += this.autoClickerCost;
+            this._overallDonutCount += this._autoClickerCost;
         }
     }
 
