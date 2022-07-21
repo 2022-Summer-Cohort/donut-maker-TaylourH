@@ -1,13 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donut Clicker</title>
-  </head>
-  <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beignet Bonanza</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/layout.css">
+</head>
+<header>
+  <h1>Beignet Bonanza</h1>
+  <!-- <div class="banner"></div> -->
+  <nav>
+    <a class="button" href="#popup1">About Our Company</a>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Beignet Bonanza Company History</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">Clevelanders and all Ohioans in general need more beignets. Beignet Bonanza Co (BBC) is here to
+          fill that void. Get Ready!
+        </div>
+      </div>
+    </div>
+    <a href="https://orteil.dashnet.org/cookieclicker/">Game Inspiration: Cookie Clicker</a>
+    <a href="https://github.com/TaylourH">Creator's Github</a>
+  </nav>
+  <!-- <div class="banner"></div> -->
+</header>
+
+<body>
+  <section class="bakeryOwner">
+    <div class="apply">
+      <h2>Apply for the open baker position.</h2>
+      <div>
+        <label>Apply here:</label>
+        <input type="text" placeholder="Write your name..." id="applied">
+        <button id="applyBtn">Apply</button>
+      </div>
+    </div>
+    <div class="appResult">
+      <!-- REPLACE with 1 or both below for JAVASCRIPT innerHTML -->
+      <!-- <h3 class="hiredWelcome"></h3>
+      <h3 class="bakerName"></h3> -->
+      <h3 class="hired">You're Hired!</h3>
+      <h3 class="hired">The pay is $3/per beignet made.</h3>
+      <div class="bakerWelcome">
+        <h3 class="hired">Welcome to the bakery,</h3>
+        <h3 class="bakerName">Baker's Name</h3>
+        <h3 class="hired">!</h3>
+      </div>
+    </div>
+  </section>
+  <section class="main">
+    <section class="mainClicker">
+      <div class="click1">
+        <div class="gameMessages">
+          <p class="messageContent">Game Messages</p>
+        </div>
+        <div class="gameDonut">
+          <button class="clickerBtn">
+            <img class="mainDonut" src="/images/beignet.png" alt="">
+          </button>
+        </div>
+        <div class="special">
+          <button class="specialBtn">
+            <img class="mardiGras" src="/images/mardiGras.png" alt="">
+          </button>
+          <p class="specialCountDown"></p>
+          <!-- <h3 class="month">Month</h3> -->
+          <button class="specialBtn2">
+            <img class="powderedSugar" src="/images/sugar.png" alt="">
+          </button>
+          <p class="specialCountDown2"></p>
+        </div>
+      </div>
+      <div class="click2">
+        <h2 id="donutsMade">Beignets Made</h2>
+      </div>
+    </section>
+    <div class="gameVariables">
+      <section class="beverage">
+        <img id="beveragePic" src="/images/glassofwater.png" alt="">
+        <h4 class="beverageLevel">Beverage Level: Glass Of Water</h4>
+      </section>
+      <section class="autoClicks">
+        <button class="purchaseAcBtn">
+          <img class="purchases" src="/images/autoClick.png" alt="">
+          <!-- Purchase Auto Clickers -->
+        </button>
+        <h4 id="autoClickers">Auto Clickers Purchased</h4>
+      </section>
+      <section class="clickMultipliers">
+        <button class="purchaseDmBtn">
+          <img class="purchases" src="/images/multiplier.png" alt="">
+          <!-- Purchase Multipliers -->
+        </button>
+        <h4 id="multipliers">Multipliers Purchased</h4>
+      </section>
+    </div>
+    <hr>
+    <section class="bakerInfo">
+      <p class="lifeDonuts">Lifetime Donuts</p>
+      <p class="pay">Baker Lifetime Pay $</p>
+      <div class="bakerTime">
+        <!-- <p class="yearsWorked">Years Worked</p>
+        <p class="monthsWorked">Months Worked</p> -->
+        <p class="timeWorked">Time</p>
+      </div>
+    </section>
+  </section>
+  <section class="resetGame">
+    <h1>DANGER ZONE</h1>
+    <h4>WARNING</h4>
+    <p>You are about to <span class="boldReset">RESET</span> the game. All Progress will be lost! Click the button below
+      at
+      your own risk!</p>
+    <button class="reset">Reset Game</button>
+  </section>
+  <footer>&copy; 2022 Beignet Bonanza </footer>
+  <script src="/js/index.js" type="module"></script>
+</body>
+
 </html>

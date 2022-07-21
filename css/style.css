@@ -1,0 +1,149 @@
+/* PICK A GOOGLE FONT TO GO HERE */
+/* * {
+    background-color: orange;
+} */
+
+button {
+    background-color: white;
+    border: none;
+}
+
+/* HEADER */
+/* banner is having issues staying static on page and overlapping nav tabs */
+.banner {
+    background-image: url('/images/beignet.png');
+    background-size: 25px;
+    position: absolute;
+    height: 4%;
+    width: 100%;
+    background-repeat: repeat-x;
+}
+
+/* NAV BAR */
+
+nav {
+    background-color: purple;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    /* background: #06D85F; */
+    color: #06D85F;
+}
+
+/* Company Info Popup */
+.button:hover {
+    /* background: #06D85F; */
+    color: #06D85F;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.popup h2 {
+    margin: 10px;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close {
+    background-color: white;
+}
+.popup .close:hover {
+    color: #06D85F;
+}
+
+/* BAKERY OWNER */
+.apply {
+    background-color: yellow;
+}
+#applyBtn {
+    background-color: #06D85F;
+    border: #333;
+    border-radius: .25rem;
+}
+.appResult {
+    background-color: green;
+    color: goldenrod;
+}
+
+/* MAIN CLICKER */
+.gameMessages {
+    height: 300px;
+    width: 300px;
+}
+
+.mainDonut {
+    height: 300px;
+    width: 300px;
+}
+
+.mardiGras {
+    height: 300px;
+    width: 300px;
+}
+
+/* GAME VARIABLES */
+#beveragePic {
+    height: 200px;
+    width: 200px;
+}
+
+.purchases {
+    height: 200px;
+    width: 200px;
+}
+
+/* SPECIAL */
+/* hide buttons until they are enabled/make them visible then diable/hide them */
+/* RESET GAME */
+.resetGame {
+    background-color: rgb(230, 51, 51);
+}
+
+/* FOOTER */
+footer {
+    font-weight: bold;
+}
