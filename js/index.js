@@ -93,13 +93,8 @@ applyBtn.addEventListener("click", () => {
 
 function checkApplyBtn() {
     let name = document.querySelector("#applied").value;
-    if (name.value == "") {
-        applyBtn.disabled;
-        // document.querySelector("#applyBtn").disabled;
-    }
-    else {
-        applyBtn.enabled;
-        // document.querySelector("#applyBtn").enabled;
+    if (!name) {
+        document.getElementById("#applyBtn").disabled = false;
     }
 }
 
