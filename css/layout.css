@@ -17,8 +17,10 @@ nav {
     gap: 3rem;
 }
 .appResult {
-    display: flex;
-    flex-direction: column;
+    display: none;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
     text-align: center;
 }
 .bakerWelcome {
@@ -32,6 +34,9 @@ nav {
     padding-left: .30rem;
 }
 /* MAIN CLICKER */
+.main {
+    display: none;
+}
 .mainClicker {
     display: flex;
     flex-direction: column;
@@ -69,7 +74,7 @@ nav {
 }
 /* RESET GAME */
 .resetGame {
-    display: flex;
+    display: none;
     flex-direction: column;
     text-align: center;
 }

@@ -1,8 +1,13 @@
 /* PICK A GOOGLE FONT TO GO HERE */
-/* BKG COLOR for checking purposes only. Will replace with a better bkg style or image */
 /* * {
     background-color: orange;
 } */
+
+button {
+    background-color: white;
+    border: none;
+}
+
 /* HEADER */
 /* banner is having issues staying static on page and overlapping nav tabs */
 .banner {
@@ -15,7 +20,7 @@
 }
 
 /* NAV BAR */
-/* do I want to add more definition to nav tabs? amybe look like buttons? */
+
 nav {
     background-color: purple;
 }
@@ -27,20 +32,16 @@ nav a {
     font-weight: bold;
 }
 
+nav a:hover {
+    /* background: #06D85F; */
+    color: #06D85F;
+}
+
 /* Company Info Popup */
-/* .button {
-    font-size: 1em;
-    padding: 10px;
-    color: #fff;
-    border: 2px solid #06D85F;
-    border-radius: 20px/50px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-  } */
-/* .button:hover {
-    background: #06D85F;
-  }  */
+.button:hover {
+    /* background: #06D85F; */
+    color: #06D85F;
+}
 
 .overlay {
     position: fixed;
@@ -87,20 +88,25 @@ nav a {
     text-decoration: none;
     color: #333;
 }
-
+.popup .close {
+    background-color: white;
+}
 .popup .close:hover {
     color: #06D85F;
 }
 
 /* BAKERY OWNER */
-/* diable game from being played until application name submitted then diable/hide application after name submitted
-and dispaly, (Your hired/pay/welcome baker name...) then application reappears when game reset  */
 .apply {
     background-color: yellow;
 }
-
+#applyBtn {
+    background-color: #06D85F;
+    border: #333;
+    border-radius: .25rem;
+}
 .appResult {
     background-color: green;
+    color: goldenrod;
 }
 
 /* MAIN CLICKER */

@@ -70,6 +70,7 @@ resetBtn.addEventListener("click", () => {
     donutCountEL.innerHTML = "Number of Beignets Baked: <br>" + donut._donutCount;
     autoClickEL.innerHTML = "Auto Clickers Purchased: " + donut._autoClickerCount;
     multiplierEL.innerHTML = "Multipliers Purchased: " + donut._multiplierCount;
+    showApplication();
 })
 
 // DONUT SITE ELEMENTS
@@ -83,10 +84,39 @@ const messagesEL = document.querySelector(".messageContent");
 
 const applyBtn = document.querySelector("#applyBtn");
 applyBtn.addEventListener("click", () => {
+    checkApplyBtn();
     let name = document.querySelector("#applied").value;
     nameEL.innerHTML = name;
+    hideApplication();
     console.log(name);
 })
+
+function checkApplyBtn() {
+    let name = document.querySelector("#applied").value;
+    if (name.value == "") {
+        applyBtn.disabled;
+        // document.querySelector("#applyBtn").disabled;
+    }
+    else {
+        applyBtn.enabled;
+        // document.querySelector("#applyBtn").enabled;
+    }
+}
+
+function hideApplication() {
+    document.querySelector(".apply").style.display = "none";
+    document.querySelector(".appResult").style.display = "flex";
+    document.querySelector(".main").style.display = "block";
+    document.querySelector(".resetGame").style.display = "flex";
+}
+
+function showApplication() {
+    document.querySelector(".apply").style.display = "flex";
+    document.querySelector("#applied").value = "";
+    document.querySelector(".appResult").style.display = "none";
+    document.querySelector(".main").style.display = "none";
+    document.querySelector(".resetGame").style.display = "none";
+}
 
 // Baker Time
 let workTick = 0;
