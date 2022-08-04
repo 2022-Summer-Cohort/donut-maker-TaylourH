@@ -2,9 +2,20 @@
 /* * {
     background-color: orange;
 } */
+/* HEADER */
+header h1 {
+    color: whitesmoke;
+    background-color: green;
+    padding: 1rem;
+    margin: 0;
+}
+
+body {
+    background-color: bisque;
+}
 
 button {
-    background-color: white;
+    background-color: bisque;
     border: none;
 }
 
@@ -41,6 +52,10 @@ nav a:hover {
 .button:hover {
     /* background: #06D85F; */
     color: #06D85F;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .overlay {
@@ -88,31 +103,61 @@ nav a:hover {
     text-decoration: none;
     color: #333;
 }
+
 .popup .close {
     background-color: white;
 }
+
 .popup .close:hover {
     color: #06D85F;
 }
 
 /* BAKERY OWNER */
-.apply {
-    background-color: yellow;
+.newspaper {
+    width: 25%;
+    height: 25%;
 }
+
+.apply {
+    background-color: gold;
+}
+
+#applied {
+    font-size: 16pt;
+}
+
+.apply div label {
+    font-size: 20pt;
+}
+
 #applyBtn {
-    background-color: #06D85F;
+    background-color: purple;
     border: #333;
     border-radius: .25rem;
+    padding: .5rem;
+    color: white;
+    font-weight: bold;
 }
+
+#applyBtn:hover {
+    background-color: #06D85F;
+    cursor: pointer;
+}
+
 .appResult {
     background-color: green;
-    color: goldenrod;
+    color: white;
 }
 
 /* MAIN CLICKER */
 .gameMessages {
     height: 300px;
     width: 300px;
+    text-align: center;
+}
+
+.messageContent {
+    font-size: 25pt;
 }
 
 .mainDonut {
@@ -143,7 +188,38 @@ nav a:hover {
     background-color: rgb(230, 51, 51);
 }
 
+.resetGame h4 {
+    color: yellow;
+    font-weight: bold;
+    font-size: 12pt;
+    font-style: italic;
+}
+
+.reset {
+    background-color: whitesmoke;
+    color: darkred;
+    font-size: 12pt;
+    font-weight: bold;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background-color: yellow;
+    color: red;
+}
+
+.boldReset {
+    font-weight: bold;
+    font-size: 20pt;
+    color: yellow;
+}
+
 /* FOOTER */
 footer {
     font-weight: bold;
+    background-color: whitesmoke;
+    color: darkcyan;
 }

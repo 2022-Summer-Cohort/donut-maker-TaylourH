@@ -36,6 +36,26 @@ setInterval(() => {
     beverageLvlUp();
 }, 1000);
 
+let stormEL = document.querySelectorAll(".storm");
+
+stormEL.forEach(special => {
+    const stormBtnEL = special.querySelector(".specialBtn");
+
+    stormBtnEL.addEventListener("click", () => {
+        hideGameCatBtn();
+    })
+
+    function hideGameCatBtn() {
+        box.querySelector(".gameBox1").style.display = "none";
+        box.querySelector(".gameBox2").style.display = "flex";
+    }
+
+    function showGameCatBtn() {
+        box.querySelector(".gameBox1").style.display = "flex";
+        box.querySelector(".gameBox2").style.display = "none";
+    }
+})
+
 const mardiGrasBtn = document.querySelector(".specialBtn");
 mardiGrasBtn.addEventListener("click", () => {
     donut.mardiGrasSpecial();
@@ -50,7 +70,7 @@ mardiGrasBtn.addEventListener("click", () => {
     }
 })
 
-const powderedSugarBtn = document.querySelector(".specialBtn2");
+const powderedSugarBtn = document.querySelector(".specialBtn");
 powderedSugarBtn.addEventListener("click", () => {
     donut.powderedSugarSpecial();
     let specialTick = 30;
@@ -103,6 +123,8 @@ function hideApplication() {
     document.querySelector(".appResult").style.display = "flex";
     document.querySelector(".main").style.display = "block";
     document.querySelector(".resetGame").style.display = "flex";
+    document.querySelector("header h1").style.backgroundColor = "gold";
+    document.querySelector("header h1").style.color = "black";
 }
 
 function showApplication() {
@@ -111,6 +133,8 @@ function showApplication() {
     document.querySelector(".appResult").style.display = "none";
     document.querySelector(".main").style.display = "none";
     document.querySelector(".resetGame").style.display = "none";
+    document.querySelector("header h1").style.backgroundColor = "green";
+    document.querySelector("header h1").style.color = "whitesmoke";
 }
 
 // Baker Time

@@ -18,7 +18,8 @@
       <div class="popup">
         <h2>Beignet Bonanza Company History</h2>
         <a class="close" href="#">&times;</a>
-        <div class="content">Clevelanders and all Ohioans in general need more beignets. Beignet Bonanza Co (BBC) is here to
+        <div class="content">Clevelanders and all Ohioans in general need more beignets. Beignet Bonanza Co (BBC) is
+          here to
           fill that void. Get Ready!
         </div>
       </div>
@@ -32,6 +33,7 @@
 <body>
   <section class="bakeryOwner">
     <div class="apply">
+      <img class="newspaper" src="/images/newspaper.png" alt="">
       <h2>Apply for the open baker position.</h2>
       <div>
         <label>Apply here:</label>
@@ -63,16 +65,22 @@
             <img class="mainDonut" src="/images/beignet.png" alt="">
           </button>
         </div>
-        <div class="special">
-          <button class="specialBtn">
-            <img class="mardiGras" src="/images/mardiGras.png" alt="">
-          </button>
-          <p class="specialCountDown"></p>
-          <!-- <h3 class="month">Month</h3> -->
-          <button class="specialBtn2">
-            <img class="powderedSugar" src="/images/sugar.png" alt="">
-          </button>
-          <p class="specialCountDown2"></p>
+        <div id="stormBtn">
+          <div class="special">
+            <div class="storm">
+              <button class="specialBtn">
+                <img class="mardiGras" src="/images/mardiGras.png" alt="">
+              </button>
+              <p class="specialCountDown"></p>
+            </div>
+            <!-- <h3 class="month">Month</h3> -->
+            <div class="storm">
+              <button class="specialBtn">
+                <img class="powderedSugar" src="/images/sugar.png" alt="">
+              </button>
+              <p class="specialCountDown2"></p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="click2">
@@ -87,16 +95,18 @@
       <section class="autoClicks">
         <button class="purchaseAcBtn">
           <img class="purchases" src="/images/autoClick.png" alt="">
-          <!-- Purchase Auto Clickers -->
+          <!-- Purchase Auto Clickers Cost -->
         </button>
-        <h4 id="autoClickers">Auto Clickers Purchased</h4>
+        <h4 id="autoClickers">Auto Clickers Purchased:</h4>
+        <h4>Add AutoClicker: $</h4>
       </section>
       <section class="clickMultipliers">
         <button class="purchaseDmBtn">
           <img class="purchases" src="/images/multiplier.png" alt="">
-          <!-- Purchase Multipliers -->
+          <!-- Purchase Multipliers Cost -->
         </button>
-        <h4 id="multipliers">Multipliers Purchased</h4>
+        <h4 id="multipliers">Multipliers Purchased:</h4>
+        <h4>Add Multiplier: $</h4>
       </section>
     </div>
     <hr>
@@ -112,7 +122,7 @@
   </section>
   <section class="resetGame">
     <h1>DANGER ZONE</h1>
-    <h4>WARNING</h4>
+    <h4>*** WARNING ***</h4>
     <p>You are about to <span class="boldReset">RESET</span> the game. All Progress will be lost! Click the button below
       at
       your own risk!</p>

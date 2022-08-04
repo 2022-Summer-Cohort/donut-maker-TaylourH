@@ -1,13 +1,15 @@
 /* HEADER */
 header h1 {
-text-align: center;
+    text-align: center;
 }
+
 /* NAV BAR */
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+
 /* BAKERY OWNER */
 .apply {
     display: flex;
@@ -16,6 +18,13 @@ nav {
     align-items: center;
     gap: 3rem;
 }
+
+.apply div {
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+}
+
 .appResult {
     display: none;
     flex-direction: row;
@@ -23,31 +32,42 @@ nav {
     justify-content: center;
     text-align: center;
 }
+
 .bakerWelcome {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
 .bakerWelcome .bakerName {
     display: flex;
     flex-direction: row;
     padding-left: .30rem;
+    padding-bottom: 1rem;
 }
+
 /* MAIN CLICKER */
 .main {
     display: none;
+    padding-top: 1rem;
 }
+
 .mainClicker {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
+
 .click1 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-
+.gameMessages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 /* .gameMessages .messageContent {
   center message text in center of div
 } */
@@ -66,18 +86,42 @@ nav {
     flex-direction: column;
     text-align: center;
 }
-.bakerTime{
+
+.bakerTime {
     display: flex;
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
 }
+
 /* RESET GAME */
+.resetGame h1 {
+    padding: 0;
+    margin: 0;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+}
+
+.resetGame h4 {
+    padding: 0;
+    margin: 0;
+    padding-bottom: .75rem;
+}
+
+.resetGame p {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 1.5rem;
+}
+
 .resetGame {
     display: none;
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    padding-bottom: 2rem;
 }
+
 /* FOOTER */
 footer {
     text-align: center;
