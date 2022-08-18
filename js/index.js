@@ -5,6 +5,9 @@ const donutCountEL = document.querySelector("#donutsMade");
 const autoClickEL = document.querySelector("#autoClickers");
 const multiplierEL = document.querySelector("#multipliers");
 
+const multiplierCostEL = document.querySelector(".nextMultiplier");
+const autoCLickCostEL = document.querySelector(".nextAutoClick");
+
 let donut = new DonutMaker();
 
 const donutClickBtn = document.querySelector(".clickerBtn");
@@ -12,18 +15,28 @@ donutClickBtn.addEventListener("click", () => {
     donut.addDonut();
     donut.lifeTimeDonuts();
     donutCountEL.innerHTML = "Beignets Available: <br>" + donut._donutCount.toFixed(0);
+    autoClickEL.innerHTML = "Auto Clickers Purchased: " + donut._autoClickerCount;
+    multiplierEL.innerHTML = "Multipliers Purchased: " + donut._multiplierCount;
+    autoCLickCostEL.innerHTML = "Add AutoClicker Cost: $" + donut._autoClickerCost.toFixed(0);
+    multiplierCostEL.innerHTML = "Add Multiplier Cost: $" + donut._multiplierCost.toFixed(0);
+    // document.querySelector(".clickerBtn").style.animationPlayState = "running";
+    // document.querySelector(".clickerBtn").style.animation = "clickEffect";
+    // document.querySelector(".clickerBtn").style.animationDuration = "0.1s";
+    // document.querySelector(".clickerBtn").style.animationIterationCount = "1";
 })
 
 const autoClickBtn = document.querySelector(".purchaseAcBtn");
 autoClickBtn.addEventListener("click", () => {
     donut.buyAutoClicker();
     autoClickEL.innerHTML = "Auto Clickers Purchased: " + donut._autoClickerCount;
+    autoCLickCostEL.innerHTML = "Add AutoClicker Cost: $" + donut._autoClickerCost.toFixed(0);
 })
 
 const multiplierBtn = document.querySelector(".purchaseDmBtn");
 multiplierBtn.addEventListener("click", () => {
     donut.buyMultiplier();
     multiplierEL.innerHTML = "Multipliers Purchased: " + donut._multiplierCount;
+    multiplierCostEL.innerHTML = "Add Multiplier Cost: $" + donut._multiplierCost.toFixed(0);
 })
 
 setInterval(() => {
@@ -35,6 +48,10 @@ setInterval(() => {
     payStats();
     beverageLvlUp();
 }, 1000);
+
+function dountClickAnimation() {
+donutClickBtn.animate
+} 
 
 let stormEL = document.querySelectorAll(".storm");
 
@@ -84,14 +101,16 @@ powderedSugarBtn.addEventListener("click", () => {
     }
 })
 
-const resetBtn = document.querySelector(".reset");
-resetBtn.addEventListener("click", () => {
-    donut = new DonutMaker();
-    donutCountEL.innerHTML = "Number of Beignets Baked: <br>" + donut._donutCount;
-    autoClickEL.innerHTML = "Auto Clickers Purchased: " + donut._autoClickerCount;
-    multiplierEL.innerHTML = "Multipliers Purchased: " + donut._multiplierCount;
-    showApplication();
-})
+// const resetBtn = document.querySelector(".reset");
+// resetBtn.addEventListener("click", () => {
+//     donut = new DonutMaker();
+//     donutCountEL.innerHTML = "Number of Beignets Baked: <br>" + donut._donutCount;
+//     autoClickEL.innerHTML = "Auto Clickers Purchased: " + donut._autoClickerCount;
+//     multiplierEL.innerHTML = "Multipliers Purchased: " + donut._multiplierCount;
+//     autoCLickCostEL.innerHTML = "Add AutoClicker Cost: $" + donut._autoClickerCost;
+//     multiplierCostEL.innerHTML = "Add Multiplier Cost: $" + donut._multiplierCost;
+//     showApplication();
+// })
 
 // DONUT SITE ELEMENTS
 // const monthEL = document.querySelector(".month");
@@ -109,6 +128,16 @@ applyBtn.addEventListener("click", () => {
     nameEL.innerHTML = name;
     hideApplication();
     console.log(name);
+    workTick = 0;
+    workOverallTime = 0;
+    workHistory();
+    payStats();
+    beverageLvlUp();
+    donutCountEL.innerHTML = "Beignets Available: <br>" + donut._donutCount.toFixed(0);
+    autoClickEL.innerHTML = "Auto Clickers Purchased: " + donut._autoClickerCount;
+    multiplierEL.innerHTML = "Multipliers Purchased: " + donut._multiplierCount;
+    autoCLickCostEL.innerHTML = "Add AutoClicker Cost: $" + donut._autoClickerCost.toFixed(0);
+    multiplierCostEL.innerHTML = "Add Multiplier Cost: $" + donut._multiplierCost.toFixed(0);
 })
 
 function checkApplyBtn() {
@@ -139,8 +168,9 @@ function showApplication() {
 
 // Baker Time
 let workTick = 0;
+let workOverallTime = 0;
 function workHistory() {
-    let workOverallTime = 0;
+
     workOverallTime = (workTick * 0.016667).toFixed(2);
     timeEL.innerHTML = "Time Worked: " + workOverallTime + " minutes";
 }
@@ -176,6 +206,21 @@ function beverageLvlUp() {
         messagesEL.innerHTML = "You have leveled up to a new Beverage Level! <br> Coffee Mug!";
     }
 }
+
+const resetBtn = document.querySelector(".reset");
+resetBtn.addEventListener("click", () => {
+    donut = new DonutMaker();
+    donutCountEL.innerHTML = "Number of Beignets Baked: <br>" + donut._donutCount;
+    autoClickEL.innerHTML = "Auto Clickers Purchased: " + donut._autoClickerCount;
+    multiplierEL.innerHTML = "Multipliers Purchased: " + donut._multiplierCount;
+    autoCLickCostEL.innerHTML = "Add AutoClicker Cost: $" + donut._autoClickerCost;
+    multiplierCostEL.innerHTML = "Add Multiplier Cost: $" + donut._multiplierCost;
+    workTick = 0;
+    workOverallTime = 0;
+    timeEL.innerHTML = "Time Worked: " + workOverallTime + " minutes";
+    showApplication();
+})
+
 
 // MONTH STUFF
 
